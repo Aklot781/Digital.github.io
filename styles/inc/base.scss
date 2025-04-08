@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Marck+Script&family=Poiret+One&display=swap');
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .clients__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .clients__item:not(:nth-child(3n)) {
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .clients__item:nth-child(-n+3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media (max-width: 767px) {
+  .header__container,
+  .hero__container,
+  .clients__container,
+  .footer__container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .two-column-section {
+    flex-direction: column;
+  }
+
+  .clients__grid {
+    grid-template-columns: 1fr;
+  }
+  .clients__item {
+    border-right: none;
+  }
+  .clients__item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  }
+}
